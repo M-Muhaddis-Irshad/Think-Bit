@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './CustomSkeleton.css'
 import { Link } from 'react-router-dom'
+import Skeleton from './CustomSkeleton/CustomSkeleton.jsx'
 
 const quizes = [
     { id: 'html', Name: "Html", color: '#e34c26' },
@@ -10,9 +12,17 @@ const quizes = [
 
 const Home = () => {
 
+    const [Loader, setLoader] = useState(0)
+
+    setTimeout(() => {
+        setLoader(1)
+    }, 1500000);
+
     return (
         <div className='grid grid-cols-12'>
-            {
+
+            {Loader > 0 ? (
+
                 quizes.map((data, index) => {
 
                     // console.log(index + 1, data)
@@ -38,7 +48,11 @@ const Home = () => {
                         </Link>
                     )
                 })
+
+            ) :
+                (<> <Skeleton /> </>)
             }
+
         </div>
 
     )

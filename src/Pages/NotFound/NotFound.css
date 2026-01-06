@@ -1,0 +1,17 @@
+.ant-result-subtitle,
+.ant-result-title {
+    color: white !important;
+}
+
+.goBackBtn {
+    color: black;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: dodgerblue;
+    transition: 0.4s;
+}
+
+.goBackBtn:hover {
+    color: white;
+    background-color: rgb(0, 116, 231);
+}

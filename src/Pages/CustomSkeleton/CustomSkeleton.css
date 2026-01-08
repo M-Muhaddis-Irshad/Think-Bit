@@ -1,0 +1,7 @@
+.ant-card {
+    @apply max-w-full !bg-[#162242] col-span-3 border border-[#004279] max-[900px]:col-span-6 max-[500px]:col-span-12;
+}
+
+.ant-skeleton-paragraph li {
+    background-color: rgb(9, 55, 90) !important;
+}

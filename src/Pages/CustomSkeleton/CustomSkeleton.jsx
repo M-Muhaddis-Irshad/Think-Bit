@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
-import { Avatar, Card, Flex, Switch } from 'antd';
-const actions = [
-    <EditOutlined key="edit" />,
-    <SettingOutlined key="setting" />,
-    <EllipsisOutlined key="ellipsis" />,
-];
+import './CustomSkeleton.css'
+import { Card } from 'antd';
 
-const Skeleton = () => {
+const CustomSkeleton = () => {
     const [loading, setLoading] = useState(true);
     return (
 
-        <Flex gap="middle" align="start" vertical>
+        <div className='grid grid-cols-12 justify-between gap-3 w-full'>
             {
-                Array.from({ length: 4 }).map((val, i) => (
+                Array.from({ length: 4 }).map((_, i) => (
 
-                    <Card loading={loading} key={i} className='min-w-2xs !bg-[#162242]' />
+                    // <div key={i} className="col-span-3">
+                    <Card
+                        key={i}
+                        loading={loading}
+                    />
+                    // </div>
                 ))
             }
-        </Flex>
+        </div>
     );
 };
-export default Skeleton;
+export default CustomSkeleton;

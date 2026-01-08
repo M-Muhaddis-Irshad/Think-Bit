@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Fontagiou';
-  src: url(/public/Fonts/fontagiou-bold.otf);
+  font-family: 'Inter';
+  src: url(/public/Fonts/Inter_24pt-Bold.ttf);
 }
 
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); */
@@ -39,6 +39,7 @@
 }
 
 body {
+  height: 100dvh !important;
   margin: 0;
   display: flex;
   place-items: center;
@@ -175,6 +176,6 @@ h2 {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-.heading {
-  font-family: 'Fontagiou';
+.card_heading {
+  @apply text-2xl mb-4 text-white;
 }

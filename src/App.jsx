@@ -12,7 +12,6 @@ const App = () => {
     return (
         <Routes>
             <Route element={<Layout />}>
-
                 <Route index element={<Home />} />
                 <Route path='start' element={<Category />} />
                 <Route path='quiz/:category' element={<Quiz />} />

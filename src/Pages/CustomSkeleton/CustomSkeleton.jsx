@@ -6,7 +6,7 @@ const CustomSkeleton = () => {
     const [loading, setLoading] = useState(true);
     return (
 
-        <div className='grid grid-cols-12 justify-between gap-3 w-full'>
+        <div className='grid grid-cols-12 justify-between gap-3 w-full max-[810px]:place-items-stretch'>
             {
                 Array.from({ length: 4 }).map((_, i) => (
 

@@ -1,22 +1,16 @@
 import { Link } from 'react-router-dom';
+import "../../src/index.css"
 
 const LandingPage = () => {
-
-    window.request
-
     return (
         <div className="landing-container" style={{ textAlign: 'center', padding: '2rem 0' }}>
             <div className="animate-fade-in">
-                <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>
-                    Master <span style={{ color: 'var(--primary-color)' }}>Web Development</span>
+                <h1 className='text-[64px] mb-4 max-[380px]:!text-4xl'>
+                    Master Web Development
                 </h1>
-                <p style={{
-                    fontSize: '1.25rem',
-                    color: '#94a3b8',
-                    maxWidth: '600px',
-                    margin: '0 auto 3rem auto',
-                    lineHeight: '1.6'
-                }}>
+                <p
+                className='main_heading'  
+                >
                     Challenge yourself with interactive Quizzes in HTML, CSS, JavaScript and React.
                     Track your progress & become a better developer today.
                 </p>

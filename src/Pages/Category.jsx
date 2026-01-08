@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // import './CustomSkeleton.css'
 import { Link } from 'react-router-dom'
 import Skeleton from './CustomSkeleton/CustomSkeleton.jsx'
@@ -14,25 +14,30 @@ const Home = () => {
 
     const [Loader, setLoader] = useState(0)
 
-    setTimeout(() => {
-        setLoader(1)
-    }, 1500);
+    useEffect(() => {
+        setTimeout(() => {
+            setLoader(1)
+        }, 1500);
+    }, [])
 
     return (
         <>
 
             {Loader > 0 ? (
 
-                <div className='grid grid-cols-12 gap-1'>
+                // <div className='grid grid-cols-12 gap-1 max-[900px]:place-items-center'>
+                <div className='grid grid-cols-12 justify-between gap-3 w-full max-[810px]:place-items-stretch'>
 
                     {quizes.map((data, index) => {
 
-                        // console.log(index + 1, data)
-
                         const { id, Name, color } = data;
-                        // font-size: 1.5rem; margin: 0px 0px 1rem; color: white;
                         return (
-                            <Link to={`/quiz/${id}`} key={id} style={{ textDecoration: 'none' }} className='col-span-3 mx-2'>
+                            <Link
+                                to={`/quiz/${id}`}
+                                key={id}
+                                style={{ textDecoration: 'none' }}
+
+                                className='category_card_parent'>
                                 <div
                                     className="glass-card"
                                     style={{ borderTop: `4px solid ${color}` }}
@@ -43,17 +48,10 @@ const Home = () => {
                                     <p style={{ color: '#94a3b8' }}>
                                         Test your knowledge
                                     </p>
-                                    <button className="btn" style={{ marginTop: '1rem', width: '100%' }}>
+                                    <button className="btn mt-4 w-full">
                                         Start Quiz
                                     </button>
                                 </div>
-
-<button className='p-4 m-2 bg-blue-800 cursor-pointer transition-all hover:bg-blue-700 focus:bg-blue-500 focus:p-3  ' onClick={
-    e => {
-        e.preventDefault()
-        e.requestFullscreen()
-    }
-}>Full screen</button>
 
                             </Link>
                         )

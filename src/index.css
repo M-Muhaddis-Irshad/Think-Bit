@@ -39,7 +39,6 @@
 }
 
 body {
-  height: 100dvh !important;
   margin: 0;
   display: flex;
   place-items: center;
@@ -82,8 +81,8 @@ body {
 .btn {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: 9.6px 19.2px;
+  font-size: 16px;
   font-weight: 600;
   font-family: inherit;
   background-color: var(--primary-color);
@@ -152,6 +151,13 @@ h2 {
   }
 }
 
+
+/* Local Editings_______________________________________ */
+
+.main_heading {
+  @apply text-[20px] text-[#94a3b8] max-w-[600px] mx-auto mb-12 leading-[1.6] max-[380px]:!text-[16px];
+}
+
 .logo_container {
   width: 80px;
   position: relative;
@@ -160,22 +166,17 @@ h2 {
 .logo_container::before {
   content: "";
   @apply absolute top-[-3px] left-0 -z-10 w-20 h-20 rounded-full blur-xl opacity-30 bg-white;
-  /* position: absolute;
-  top: -3px;
-  left: 0;
-  z-index: -1;
-  width: 80px;
-  height: 80px;
-  opacity: 30%;
-  filter: blur(20px);
-  background: white;
-  border-radius: 50%; */
 }
 
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
+.category_card_parent {
+  @apply col-span-3 mx-2 max-[1060px]:col-span-4 max-[1060px]:my-2 max-[810px]:col-span-6 max-[540px]:col-span-full;
+}
+
+
 .card_heading {
-  @apply text-2xl mb-4 text-white;
+  @apply text-2xl mb-6 text-white;
 }

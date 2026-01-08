@@ -1,5 +1,7 @@
+@import 'tailwindcss';
+
 .ant-card {
-    @apply max-w-full !bg-[#162242] col-span-3 border border-[#004279] max-[900px]:col-span-6 max-[500px]:col-span-12;
+    @apply !bg-[#162242] border border-[#004279] col-span-3 mx-2 max-[1060px]:col-span-4 max-[1060px]:my-2 max-[810px]:col-span-6 max-[540px]:col-span-full ;
 }
 
 .ant-skeleton-paragraph li {

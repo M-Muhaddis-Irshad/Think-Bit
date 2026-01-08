@@ -16,7 +16,7 @@ const Layout = () => {
         <Outlet />
       </main>
 
-      <footer className='p-4 mt-8'>
+      <footer className='border-t border-t-cyan-600 p-4 mt-8'>
         <p>©2025 ThinkBit all rights reserved.</p>
       </footer>
     </div>
